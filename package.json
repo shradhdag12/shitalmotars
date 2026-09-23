@@ -1,0 +1,17 @@
+{
+  "name": "shital-motors",
+  "version": "1.0.0",
+  "description": "Shital Motors - Used Cars Buying & Selling & Car Rental Services",
+  "main": "server/server.js",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "npm start --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
