@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0A0A0C;
+    --bg-card: #121216;
+    --border-color: #22222A;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+  }
+
+  .light {
+    --bg-primary: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border-color: #E2E8F0;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+  }
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EAB308;
+}
+
+/* Gold Gradient Text & Buttons */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FACC15 0%, #EAB308 50%, #CA8A04 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-button {
+  background: linear-gradient(135deg, #FACC15 0%, #EAB308 100%);
+  color: #000000;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.gold-button:hover {
+  background: linear-gradient(135deg, #FFE066 0%, #FACC15 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3);
+}
+
+.gold-border {
+  border-color: rgba(234, 179, 8, 0.4);
+}
+
+.gold-border:hover {
+  border-color: rgba(234, 179, 8, 0.8);
+}
